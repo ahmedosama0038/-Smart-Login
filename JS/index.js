@@ -122,8 +122,8 @@ function vildemill(){
 if ( exxist ) {
 
         
-   xmasseg.classList.remove("d-none");
-    xmasseg.innerText = "Email already exists";   
+   ptext.classList.remove("d-none");
+    ptext.innerText = "Invalid email format";   
      emill.classList.remove("is-valid");
      emill.classList.add("is-invalid");
     
@@ -131,13 +131,7 @@ if ( exxist ) {
 
 
      }
-else{
-
-     xmasseg.classList.add("d-none");
-          emill.classList.remove("is-invalid");
-     emill.classList.add("is-valid");
- return  true
-}
+ 
 
 }
 
@@ -146,13 +140,23 @@ else{
         emill.classList.remove("is-valid");
         emill.classList.add("is-invalid");
         xmasseg.classList.remove("d-none");
-        xmasseg.innerText = "Invalid email format";
+        xmasseg.innerText = "Email already exists";
         // ptext.innerText = "Email already exists";
         return false
     }
 
+        
  
+
+   
+
+     xmasseg.classList.add("d-none");
+     emill.classList.remove("is-invalid");
+     emill.classList.add("is-valid");
+ return  true ;
 }
+ 
+
 
 
 
