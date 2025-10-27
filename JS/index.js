@@ -93,7 +93,7 @@ function vildusernama() {
         usernama.classList.remove("is-valid");
         usernama.classList.add("is-invalid");
         ptext.classList.remove("d-none");
-        ptext.innerText = "Username must be 3-12 characters long and contain only letters and numbers";  
+        ptext.innerText = "Invalid username format";  
       
         return false
     }
@@ -108,7 +108,7 @@ function vildusernama() {
 
 
 function vildemill(){
-    var text = emill.value.trim();
+    var text = emill.value;
     var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     if(regex.test(text)) {
 
@@ -128,8 +128,8 @@ function vildemill(){
 if ( exxist ) {
 
         
-   ptext.classList.remove("d-none");
-    ptext.innerText = "Invalid email format";   
+   xmasseg.classList.remove("d-none");
+    xmasseg.innerText = "All inputs is required";   
      emill.classList.remove("is-valid");
      emill.classList.add("is-invalid");
     
@@ -137,7 +137,13 @@ if ( exxist ) {
 
 
      }
- 
+else{
+
+     xmasseg.classList.add("d-none");
+          emill.classList.remove("is-invalid");
+     emill.classList.add("is-valid");
+ return  true
+}
 
 }
 
@@ -145,22 +151,80 @@ if ( exxist ) {
 
         emill.classList.remove("is-valid");
         emill.classList.add("is-invalid");
-        xmasseg.classList.remove("d-none");
-        xmasseg.innerText = "Email already exists";
+         ptext.classList.add("d-none");
         // ptext.innerText = "Email already exists";
         return false
     }
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function vildemill(){
+//     var text = emill.value.trim();
+//     var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+//     if(regex.test(text)) {
+
+//   let exxist = false ;
+
+//         for (let i =0 ; i< alldata.length ; i++ ) {
+     
+//             if ( emill.value.toLowerCase()  === alldata[i].email.toLowerCase() ) {
+//                 exxist = true ;
+//                 break;
+                
+//             }
+
+//         }
+
+
+// if ( exxist ) {
+
+        
+//    ptext.classList.remove("d-none");
+//     ptext.innerText = "Invalid email format";   
+//      emill.classList.remove("is-valid");
+//      emill.classList.add("is-invalid");
+    
+//   return  false;
+
+
+//      }
+ 
+
+// }
+
+//     else {
+
+//         emill.classList.remove("is-valid");
+//         emill.classList.add("is-invalid");
+//         xmasseg.classList.remove("d-none");
+//         xmasseg.innerText = "Email already exists";
+//         // ptext.innerText = "Email already exists";
+//         return false
+//     }
 
         
  
 
    
 
-     xmasseg.classList.add("d-none");
-     emill.classList.remove("is-invalid");
-     emill.classList.add("is-valid");
- return  true ;
-}
+//      xmasseg.classList.add("d-none");
+//      emill.classList.remove("is-invalid");
+//      emill.classList.add("is-valid");
+//  return  true ;
+// }
  
 
 
