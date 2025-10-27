@@ -105,82 +105,55 @@ function vildemill(){
     var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     if(!regex.test(text)) {
 
-//   let exxist = false ;
+  let exxist = false ;
 
-        // for (let i =0 ; i< alldata.length ; i++ ) {
+        for (let i =0 ; i< alldata.length ; i++ ) {
      
-        //     if ( emill.value.toLowerCase()  === alldata[i].email.toLowerCase() ) {
-        //         exxist = true ;
-        //         break;
+            if ( emill.value.toLowerCase()  === alldata[i].email.toLowerCase() ) {
+                exxist = true ;
+                break;
                 
-        //     }
+            }
 
-        // }
-
-
-     
-     emill.classList.remove("is-valid");
-     emill.classList.add("is-invalid"); 
-   xmasseg.classList.remove("d-none");
-    xmasseg.innerText = "anvalid email format";   
-  return  false;
-
-
-
-}
-let exxist = alldata.some(user =>  user.email.toLowerCase() === emill.value.toLowerCase() );
-    
-
+        }
 
 
 if ( exxist ) {
 
         
-     emill.classList.remove("is-valid");
-     emill.classList.add("is-invalid"); 
    xmasseg.classList.remove("d-none");
     xmasseg.innerText = "Email already exists";   
-  return  false;
+     emill.classList.remove("is-valid");
+     emill.classList.add("is-invalid");
     
-        
+  return  false;
+
+
+     }
+else{
+
+     xmasseg.classList.add("d-none");
+          emill.classList.remove("is-invalid");
+     emill.classList.add("is-valid");
+ return  true
+}
+
+}
+
+    else {
+
+        emill.classList.remove("is-valid");
+        emill.classList.add("is-invalid");
+        xmasseg.classList.remove("d-none");
+        xmasseg.innerText = "Invalid email format";
+        // ptext.innerText = "Email already exists";
+        return false
     }
 
-
-    
-     emill.classList.add("is-valid");
-     emill.classList.remove("is-invalid"); 
-   xmasseg.classList.add("d-none");
-    return  true;
-
-}
-
-//      }
-// else{
-
-//      xmasseg.classList.add("d-none");
-//           emill.classList.remove("is-invalid");
-//      emill.classList.add("is-valid");
-//  return  true
-// }
-
-// }
-
-//     else {
-
-        // emill.classList.remove("is-valid");
-        // emill.classList.add("is-invalid");
-        // xmasseg.classList.remove("d-none");
-        // xmasseg.innerText = "Invalid email format";
-        // // ptext.innerText = "Email already exists";
-        // return false
-    // }
-
  
-// }
-
-
-
 }
+
+
 
 function vildpassword(){
     var text = password.value;
