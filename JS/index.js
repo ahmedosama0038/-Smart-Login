@@ -101,10 +101,16 @@ function vildusernama() {
 
 
 
+
+
+
+
+
+
 function vildemill(){
     var text = emill.value.trim();
     var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    if(!regex.test(text)) {
+    if(regex.test(text)) {
 
   let exxist = false ;
 
