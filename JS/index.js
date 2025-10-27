@@ -149,7 +149,7 @@ if ( exxist ) {
 
         
    xmasseg.classList.remove("d-none");
-    xmasseg.innerText = "this email already exists";   
+    xmasseg.innerText = "All inputs is required";   
      emill.classList.remove("is-valid");
      emill.classList.add("is-invalid");
     
