@@ -1,0 +1,34 @@
+body{
+    background-color: #24353F;
+    font-family: "Titillium Web", sans-serif;
+}
+
+input{
+    background-color: transparent !important;
+    outline: none;
+    color: white !important;
+    
+}
+
+input::placeholder{
+    color: #9B9EA0 !important;
+    opacity: 1 !important;
+}
+
+input:focus{
+    box-shadow: none !important;
+    border-color: #17A2B8 !important;
+}
+
+.form-control.is-invalid:focus{
+    border: 1px solid rgba(255, 0, 0, 0.799) !important;
+}
+
+.form-control.is-valid:focus{ 
+border: 1px solid rgba(0, 128, 0, 0.776) !important;
+
+}
+/* 
+ input.active{
+box-shadow: 0 0 55px red !important;
+} */
