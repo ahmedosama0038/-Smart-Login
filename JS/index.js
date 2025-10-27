@@ -93,6 +93,7 @@ function vildusernama() {
         usernama.classList.remove("is-valid");
         usernama.classList.add("is-invalid");
         ptext.classList.remove("d-none");
+        ptext.innerText = "Username must be 3-12 characters long and contain only letters and numbers";  
       
         return false
     }
