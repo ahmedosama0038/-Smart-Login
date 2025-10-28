@@ -9,10 +9,6 @@ var ztext = document.getElementById("ztext")
 var xmasseg = document.getElementById("xmasseg")
 var loginBtn2 = document.getElementById("loginBtn2")
 
-console.log(ztext);
-console.log(ptext);
-
-
 
 var alldata = [];
 if(localStorage.getItem("users")   ) {
