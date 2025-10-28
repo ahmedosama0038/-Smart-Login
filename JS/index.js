@@ -112,7 +112,7 @@ if ( exxist ) {
 
         
    xmasseg.classList.remove("d-none");
-    xmasseg.innerText = "All inputs is required";   
+    xmasseg.innerText = "Email already exists";   
      emill.classList.remove("is-valid");
      emill.classList.add("is-invalid");
     
@@ -135,7 +135,7 @@ else{
         emill.classList.remove("is-valid");
         emill.classList.add("is-invalid");
          ztext.classList.add("d-none");
-         ztext.innerText = "Email already exists";
+         ztext.innerText = "“Please enter a valid email address";
         return false
     }
 
