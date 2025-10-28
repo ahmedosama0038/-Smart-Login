@@ -34,7 +34,7 @@ let xpassword=  document.getElementById("password").value.trim();
       email.classList.add("is-invalid");
          password.classList.add("is-invalid");
         ntext.classList.remove("d-none");
-        ntext.innerText = "Email or  password is incorrect";
+        ntext.innerText = "Email  is incorrect";
         
     
 
