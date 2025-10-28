@@ -7,6 +7,7 @@ var password  = document.getElementById("password2")
 var ptext = document.getElementById("ptext")
 var ztext = document.getElementById("ztext")
 var xmasseg = document.getElementById("xmasseg")
+var qtext = document.getElementById("qtext")
 var loginBtn2 = document.getElementById("loginBtn2")
 
 
@@ -148,14 +149,15 @@ function vildpassword(){
     if(regex.test(text)) {
         password.classList.remove("is-invalid");
         password.classList.add("is-valid");
-        ptext.classList.add("d-none");
+       qtext.classList.add("d-none");
         return true
 }
 
     else {
         password.classList.remove("is-valid");
         password.classList.add("is-invalid");
-        ptext.classList.remove("d-none");
+       qtext.classList.remove("d-none");
+         qtext.innerText = "Password must be at least 8 characters long and contain at least one letter and one number";
         return false
     }
     
