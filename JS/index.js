@@ -5,6 +5,7 @@ var usernama = document.getElementById("username2")
 var emill = document.getElementById("email2")
 var password  = document.getElementById("password2")
 var ptext = document.getElementById("ptext")
+var ztext = document.getElementById("ztext")
 var xmasseg = document.getElementById("xmasseg")
 var loginBtn2 = document.getElementById("loginBtn2")
 
@@ -151,8 +152,8 @@ else{
 
         emill.classList.remove("is-valid");
         emill.classList.add("is-invalid");
-         ptext.classList.add("d-none");
-        // ptext.innerText = "Email already exists";
+         ztext.classList.add("d-none");
+         ztext.innerText = "Email already exists";
         return false
     }
 

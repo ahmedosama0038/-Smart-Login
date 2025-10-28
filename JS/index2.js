@@ -14,8 +14,8 @@ function  dataemill(){
 let xemail=  document.getElementById("email").value.trim();
 let xpassword=  document.getElementById("password").value.trim();
 
- console.log(xemail);
- 
+
+
 
 
     for (var i = 0; i < alldata.length; i++) {
