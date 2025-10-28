@@ -2,6 +2,7 @@
 var email = document.getElementById("email")
 var password  = document.getElementById("password")
 var ntext = document.getElementById("ntext") 
+var masgpass = document.getElementById("masgpass") 
 var loginBtn = document.getElementById("loginBtn")
 
 var alldata= JSON.parse(localStorage.getItem("users")) || [] ;
@@ -39,6 +40,72 @@ let xpassword=  document.getElementById("password").value.trim();
 
 
 }
+
+
+
+
+
+function vildemill(){
+    var text = email.value;
+    var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    if(regex.test(text)) {
+       email.classList.remove("is-invalid");
+       email.classList.add("is-valid");
+        ntext.classList.add("d-none");
+  
+        return true
+}
+
+
+
+    else {
+       email.classList.remove("is-valid");
+       email.classList.add("is-invalid");
+        ntext.classList.remove("d-none");
+        ntext.innerText = "Please enter a valid email address";
+        return false
+    }
+
+ 
+}
+
+
+
+function vildpassword(){
+    var text = password.value;
+    var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
+    if(regex.test(text)) {
+        password.classList.remove("is-invalid");
+        password.classList.add("is-valid");
+        ntext.classList.add("d-none");
+        return true
+}
+
+    else {
+        password.classList.remove("is-valid");
+        password.classList.add("is-invalid");
+        masgpass.classList.remove("d-none");
+        masgpass.innerText = "blank or invalid password format";
+        return false
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -85,50 +152,6 @@ password.addEventListener( "input" , checkAllInput )
 
 
 
-function vildemill(){
-    var text = email.value;
-    var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    if(regex.test(text)) {
-       email.classList.remove("is-invalid");
-       email.classList.add("is-valid");
-        ntext.classList.add("d-none");
-  
-        return true
-}
-
-
-
-    else {
-       email.classList.remove("is-valid");
-       email.classList.add("is-invalid");
-        ntext.classList.remove("d-none");
-        ntext.innerText = "Email already exists";
-        return false
-    }
-
- 
-}
-
-
-
-function vildpassword(){
-    var text = password.value;
-    var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
-    if(regex.test(text)) {
-        password.classList.remove("is-invalid");
-        password.classList.add("is-valid");
-        ntext.classList.add("d-none");
-        return true
-}
-
-    else {
-        password.classList.remove("is-valid");
-        password.classList.add("is-invalid");
-        ntext.classList.remove("d-none");
-        return false
-    }
-    
-}
 
 
 
