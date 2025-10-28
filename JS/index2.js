@@ -76,7 +76,7 @@ function vildpassword(){
     var regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
     if(regex.test(text)) {
         password.classList.remove("is-invalid");
-        password.classList.add("is-valid");
+        // password.classList.add("is-valid");
         ntext.classList.add("d-none");
         return true
 }
